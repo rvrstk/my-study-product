@@ -17,38 +17,33 @@
       text-align: center;
       padding: 20px;
     }
-    h1 {
-      color: #333;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #555;
-      margin-bottom: 20px;
-    }
-    a {
-      display: inline-block;
+    h1 { color: #333; margin-bottom: 10px; }
+    p { color: #555; margin-bottom: 20px; }
+    button {
       padding: 12px 24px;
       background: #007bff;
       color: #fff;
-      text-decoration: none;
+      border: none;
       border-radius: 8px;
       font-size: 16px;
+      cursor: pointer;
     }
-    a:hover {
-      background: #0056b3;
-    }
+    button:hover { background: #0056b3; }
   </style>
 </head>
 <body>
   <h1>Sản phẩm học tập</h1>
-  <p>Nếu bạn thấy màn hình trắng khi mở trong Zalo, hãy bấm nút dưới đây để xem bằng trình duyệt ngoài (Chrome/Safari).</p>
-  <a href="https://editor.p5js.org/l.reverse.teik.l/full/jewkmUJjG" target="_blank">Mở sản phẩm</a>
+  <p>Nếu bạn đang mở bằng Zalo, hãy nhấn nút bên dưới.<br>
+  Nếu vẫn không được, bấm dấu ba chấm "⋮" trên góc phải rồi chọn <b>"Mở bằng Chrome"</b>.</p>
+  <button onclick="openInBrowser()">Mở sản phẩm</button>
 
   <script>
-    // Tự động redirect nếu không phải đang trong Zalo
-    var ua = navigator.userAgent || navigator.vendor || window.opera;
-    if (!/Zalo/i.test(ua)) {
-      window.location.href = "https://editor.p5js.org/l.reverse.teik.l/full/jewkmUJjG";
+    function openInBrowser() {
+      var url = "https://editor.p5js.org/l.reverse.teik.l/full/jewkmUJjG";
+      // Cách 1: thử mở tab mới (nếu Zalo cho phép)
+      window.open(url, "_blank");
+      // Cách 2: fallback, ép người dùng đi thẳng tới link
+      window.location.href = url;
     }
   </script>
 </body>
