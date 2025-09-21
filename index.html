@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm học tập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sản phẩm học tập</h1>
+  <p>Nếu bạn thấy màn hình trắng khi mở trong Zalo, hãy bấm nút dưới đây để xem bằng trình duyệt ngoài (Chrome/Safari).</p>
+  <a href="https://editor.p5js.org/l.reverse.teik.l/full/jewkmUJjG" target="_blank">Mở sản phẩm</a>
+
+  <script>
+    // Tự động redirect nếu không phải đang trong Zalo
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    if (!/Zalo/i.test(ua)) {
+      window.location.href = "https://editor.p5js.org/l.reverse.teik.l/full/jewkmUJjG";
+    }
+  </script>
+</body>
+</html>
